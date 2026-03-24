@@ -1,0 +1,57 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@langchain/community": "^1.0.2",
+    "@langchain/core": "^1.0.4",
+    "@speechmatics/auth": "^0.1.0",
+    "@speechmatics/browser-audio-input": "^2.0.3",
+    "@speechmatics/browser-audio-input-react": "^2.0.3",
+    "@speechmatics/flow-client-react": "^0.2.1",
+    "@speechmatics/web-pcm-player-react": "^2.0.0",
+    "@splinetool/react-spline": "^4.1.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "d3-dsv": "^2.0.0",
+    "framer-motion": "^12.23.26",
+    "motion": "^12.23.24",
+    "onnxruntime-web": "1.14.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "react-router": "^7.9.4",
+    "react-router-dom": "^7.9.4",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "tailwindcss": "^4.1.14"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "babel-plugin-react-compiler": "^19.1.0-rc.3",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "vite": "npm:rolldown-vite@7.1.14",
+    "vite-plugin-svgr": "^4.5.0"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.1.14",
+    "onnxruntime-web": "1.14.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "onnxruntime-web": "1.14.0"
+    }
+  }
+}
