@@ -13,7 +13,7 @@ class PCMProcessor extends AudioWorkletProcessor {
 
       // Add new data to buffer
       const newBuffer = new Float32Array(
-        this.buffer.length + float32Data.length
+        this.buffer.length + float32Data.length,
       );
       newBuffer.set(this.buffer);
       newBuffer.set(float32Data, this.buffer.length);
@@ -32,7 +32,7 @@ class PCMProcessor extends AudioWorkletProcessor {
             float32Data: frame.buffer, // Send Float32, not Int16
             sampleRate: this.sampleRate,
           },
-          [frame.buffer] // Transfer ownership for efficiency
+          [frame.buffer], // Transfer ownership for efficiency
         );
 
         // Remove processed frame from buffer

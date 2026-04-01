@@ -1,7 +1,7 @@
 const searchCSV = async (query) => {
   try {
     const response = await fetch(
-      `http://localhost:3000/search-csv?query=${encodeURIComponent(query)}`,
+      `${import.meta.env.VITE_BACKEND_URL}/search-csv?query=${encodeURIComponent(query)}`,
       {
         method: "GET",
         headers: {

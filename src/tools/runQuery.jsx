@@ -1,6 +1,6 @@
 const runQuery = async (query) => {
   try {
-    const response = await fetch("http://localhost:3000/user-query", {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/user-query`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

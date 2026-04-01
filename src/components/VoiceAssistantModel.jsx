@@ -34,7 +34,7 @@ export default function VoiceAssistantModel({ isSpeaking }) {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.src = isSpeaking ? "/videos/avatar.mp4" : "/videos/avatar-silent.mp4";
+      videoRef.current.src = isSpeaking ? "/avatar.mp4" : "/avatar-silent.mp4";
       videoRef.current.play();
     }
   }, [isSpeaking]);

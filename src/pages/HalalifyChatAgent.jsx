@@ -358,11 +358,11 @@ function HalalifyChatAgent() {
   }, [messages, pendingImage]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/start-chat", {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/start-chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     }).then(() => {
-      const webSocket = new WebSocket("ws://localhost:9000");
+      const webSocket = new WebSocket(`${import.meta.env.VITE_CHAT_WS_URL}`);
       wsRef.current = webSocket;
 
       wsRef.current.onopen = () => console.log("Connected to Backend!");
@@ -389,6 +389,12 @@ function HalalifyChatAgent() {
           });
         }
       };
+      wsRef.current.onclose = ()=>{
+        console.log("Websocket connection closed!")
+      }
+      wsRef.current.onerror = (error)=>{
+        console.error("Some error occured while establishing websocket connection", error)
+      }
     });
   }, []);
 

@@ -17,6 +17,9 @@ importers:
       '@langchain/core':
         specifier: ^1.0.4
         version: 1.1.5(openai@6.13.0(ws@8.18.3)(zod@4.2.1))
+      '@ricky0123/vad-react':
+        specifier: ^0.0.34
+        version: 0.0.34(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@speechmatics/auth':
         specifier: ^0.1.0
         version: 0.1.0
@@ -733,6 +736,15 @@ packages:
 
   '@protobufjs/utf8@1.1.0':
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
+
+  '@ricky0123/vad-react@0.0.34':
+    resolution: {integrity: sha512-JfyRHlKM+owCWqjNer7L5yrqwHytvaEVlHLQkfx9Bg1mXVVfviwEe5E14jc24LzQf9UU/IFZz4zhIfRshCE0nA==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
+  '@ricky0123/vad-web@0.0.28':
+    resolution: {integrity: sha512-Hvw8jN3r1SBxmjJa89HITxRcwlT6dc7CQPVtVQLrqfY8EeQcx41QeqKUol4lw8ZCeAIHKwYndHnB1K/4SAQJgQ==}
 
   '@rolldown/binding-android-arm64@1.0.0-beta.41':
     resolution: {integrity: sha512-Edflndd9lU7JVhVIvJlZhdCj5DkhYDJPIRn4Dx0RUdfc8asP9xHOI5gMd8MesDDx+BJpdIT/uAmVTearteU/mQ==}
@@ -2957,6 +2969,17 @@ snapshots:
   '@protobufjs/pool@1.1.0': {}
 
   '@protobufjs/utf8@1.1.0': {}
+
+  '@ricky0123/vad-react@0.0.34(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      '@ricky0123/vad-web': 0.0.28
+      onnxruntime-web: 1.14.0
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
+  '@ricky0123/vad-web@0.0.28':
+    dependencies:
+      onnxruntime-web: 1.14.0
 
   '@rolldown/binding-android-arm64@1.0.0-beta.41':
     optional: true
